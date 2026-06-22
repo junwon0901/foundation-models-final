@@ -103,21 +103,17 @@ Edit (press Enter to quit)
 
 ## Results
 
-### Input Sketch
+### Red apple
 
-![Input sketch](results/00_input_sketch.png)
+<img src="results/00_input_sketch.png" width="160" alt="Input sketch"> → ![ControlNet output](results/02_controlnet_before.png) → ![3D mesh](results/Tripo_result_before.png)
 
-### Before Edit — red apple
+*sketch → ControlNet image → 3D mesh*
 
-| ControlNet output | 3D mesh |
-|---|---|
-| ![ControlNet before](results/02_controlnet_before.png) | ![Mesh before](results/Tripo_result_before.png) |
+### After edit: blue apple
 
-### After Edit — blue apple
+<img src="results/00_input_sketch.png" width="160" alt="Input sketch"> → ![ControlNet output](results/02_controlnet_after.png) → ![3D mesh](results/Tripo_result_after.png)
 
-| ControlNet output | 3D mesh |
-|---|---|
-| ![ControlNet after](results/02_controlnet_after.png) | ![Mesh after](results/Tripo_result_after.png) |
+*same sketch, edited prompt → 3D mesh*
 
 ## Models
 
