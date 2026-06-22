@@ -56,13 +56,13 @@ This creates the `sketch3d` conda environment and installs all dependencies.
 python demo.py samples/sample_01.png
 ```
 
-Useful options:
+Use `--no-viewer` to skip the interactive 3D viewer (e.g. on headless servers):
 
 ```bash
-python demo.py samples/sample_01.png --device cuda
-python demo.py samples/sample_01.png --device mps
 python demo.py samples/sample_01.png --no-viewer
 ```
+
+Device is selected automatically (CUDA → MPS → CPU). Use `--device` to override.
 
 After the mesh is shown, type an edit prompt in the terminal and press Enter. Press Enter on an empty line to stop.
 
