@@ -1,5 +1,5 @@
-transformers==4.40.2
-diffusers==0.27.2
+transformers>=4.57.0
+diffusers
 accelerate
 huggingface-hub
 safetensors
@@ -12,6 +12,7 @@ numpy<2
 opencv-python
 matplotlib
 scipy
+scikit-image
 
 rembg
 onnxruntime
