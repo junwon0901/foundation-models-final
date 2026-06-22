@@ -12,6 +12,7 @@ numpy<2
 opencv-python
 matplotlib
 scipy
+scikit-image
 
 rembg
 onnxruntime
