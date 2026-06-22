@@ -48,9 +48,7 @@ Run the setup script:
 bash setup.sh
 ```
 
-This creates the `sketch3d` conda environment, installs PyTorch, builds `torchmcubes` from source, and installs all remaining dependencies in the correct order.
-
-> If you need a specific CUDA version of PyTorch, edit the `pip install torch torchvision` line in `setup.sh` with the matching build from the official PyTorch site.
+This creates the `sketch3d` conda environment and installs all dependencies.
 
 ## Run
 
