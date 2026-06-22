@@ -50,14 +50,6 @@ conda activate sketch3d
 pip install -r requirement.txt
 ```
 
-Using venv:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirement.txt
-```
-
 For CUDA, install the matching PyTorch build from the official PyTorch site first, then run `pip install -r requirement.txt`.
 
 ## Run
