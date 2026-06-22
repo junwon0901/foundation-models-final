@@ -44,19 +44,21 @@ cd foundation-models-final
 
 Using conda:
 
+**Step 1.** Create and activate the environment:
 ```bash
 conda create -n sketch3d python=3.10 -y
 conda activate sketch3d
 ```
 
+**Step 2.** Install PyTorch first, then the rest of the dependencies:
 ```bash
 pip install torch torchvision
 pip install -r requirement.txt
 ```
 
-> **Note:** `torchmcubes` builds from source and requires PyTorch to already be installed. Run the two `pip` commands in order — do not combine them into one step.
+> `torchmcubes` builds from source and requires PyTorch to be installed first. Run the two `pip` commands separately, in order.
 
-For CUDA, replace the `pip install torch torchvision` line with the matching build from the official PyTorch site.
+For CUDA, replace `pip install torch torchvision` with the matching build from the official PyTorch site.
 
 ## Run
 
