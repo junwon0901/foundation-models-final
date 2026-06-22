@@ -47,10 +47,11 @@ Using conda:
 ```bash
 conda create -n sketch3d python=3.10 -y
 conda activate sketch3d
+pip install torch torchvision
 pip install -r requirement.txt
 ```
 
-For CUDA, install the matching PyTorch build from the official PyTorch site first, then run `pip install -r requirement.txt`.
+For CUDA, replace the torch line with the matching build from the official PyTorch site before running `pip install -r requirement.txt`.
 
 ## Run
 
