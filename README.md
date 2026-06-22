@@ -16,7 +16,7 @@ sketch image
   <tr>
     <td align="center"><img src="results/00_input_sketch.png" width="140"/></td>
     <td align="center"><b>→</b></td>
-    <td align="center"><img src="results/Tripo_result_before.png" width="160"/></td>
+    <td align="center"><img src="results/apple_3d.png" width="160"/></td>
     <td width="60"></td>
     <td align="center"><img src="results/octopus_sketch.png" width="140"/></td>
     <td align="center"><b>→</b></td>
