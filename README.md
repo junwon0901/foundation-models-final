@@ -42,6 +42,14 @@ git clone https://github.com/junwon0901/foundation-models-final.git
 cd foundation-models-final
 ```
 
+Using conda:
+
+```bash
+conda create -n sketch3d python=3.10 -y
+conda activate sketch3d
+pip install -r requirement.txt
+```
+
 Using venv:
 
 ```bash
