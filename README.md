@@ -123,23 +123,30 @@ Edit (press Enter to quit)
 
 ## Results
 
+```text
+Sketch  →  [Qwen] prompt  →  [ControlNet] image  →  [rembg] foreground  →  [Qwen] validate  →  [TripoSR] mesh
+```
+
 <table align="center">
   <tr>
     <th align="center">Sketch</th>
-    <th align="center">Prompt</th>
-    <th align="center">Generated Image</th>
+    <th align="center">Qwen Prompt</th>
+    <th align="center">ControlNet Output</th>
     <th align="center">3D Mesh</th>
   </tr>
   <tr>
-    <td align="center" rowspan="2"><img src="results/00_input_sketch.png" width="140"/></td>
-    <td align="center"><code>red apple</code></td>
-    <td align="center"><img src="results/02_controlnet_before.png" width="200"/></td>
-    <td align="center"><img src="results/Tripo_result_before.png" width="200"/></td>
+    <td align="center" rowspan="2"><img src="results/00_input_sketch.png" width="130"/></td>
+    <td><code>red apple, natural skin texture,<br>small stem with leaf,<br>isometric view, no background</code></td>
+    <td align="center"><img src="results/02_controlnet_before.png" width="185"/></td>
+    <td align="center"><img src="results/Tripo_result_before.png" width="185"/></td>
   </tr>
   <tr>
-    <td align="center"><code>blue apple</code></td>
-    <td align="center"><img src="results/02_controlnet_after.png" width="200"/></td>
-    <td align="center"><img src="results/Tripo_result_after.png" width="200"/></td>
+    <td>
+      <sub>✏ edit: "파란색으로 변경해 줘." → Switch to blue.</sub><br><br>
+      <code>blue apple, natural skin texture,<br>small stem with leaf,<br>isometric view, no background</code>
+    </td>
+    <td align="center"><img src="results/02_controlnet_after.png" width="185"/></td>
+    <td align="center"><img src="results/Tripo_result_after.png" width="185"/></td>
   </tr>
 </table>
 
