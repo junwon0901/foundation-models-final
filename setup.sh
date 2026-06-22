@@ -21,7 +21,8 @@ conda install -c nvidia cuda-toolkit cuda-nvcc -y
 
 echo ""
 echo "==> [3/4] Installing torchmcubes"
-CUDA_HOME=$CONDA_PREFIX PATH=$CONDA_PREFIX/bin:$PATH \
+CUDA_HOME=$CONDA_PREFIX/targets/x86_64-linux \
+  PATH=$CONDA_PREFIX/bin:$PATH \
   pip install git+https://github.com/tatsy/torchmcubes.git
 
 echo ""
