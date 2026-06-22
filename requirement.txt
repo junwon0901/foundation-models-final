@@ -21,7 +21,7 @@ onnxruntime
 omegaconf
 einops
 trimesh
-torchmcubes
+git+https://github.com/tatsy/torchmcubes.git
 open3d
 fast-simplification
 xatlas
