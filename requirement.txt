@@ -1,7 +1,5 @@
-torch
-torchvision
-transformers>=4.57.0
-diffusers
+transformers==4.40.2
+diffusers==0.27.2
 accelerate
 huggingface-hub
 safetensors
@@ -10,7 +8,7 @@ sentencepiece
 protobuf
 
 pillow
-numpy
+numpy<2
 opencv-python
 matplotlib
 scipy
@@ -21,7 +19,6 @@ onnxruntime
 omegaconf
 einops
 trimesh
-git+https://github.com/tatsy/torchmcubes.git
 open3d
 fast-simplification
 xatlas
