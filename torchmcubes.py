@@ -18,7 +18,7 @@ def marching_cubes(volume, level):
         level=level
     )
 
-    vertices = torch.from_numpy(vertices.astype(np.float32)).to(device=device)
-    faces = torch.from_numpy(faces[:, ::-1].astype(np.int64)).to(device=device)
+    vertices = torch.from_numpy(vertices[:, [2, 1, 0]].astype(np.float32)).to(device=device)
+    faces = torch.from_numpy(faces.astype(np.int64)).to(device=device)
 
     return vertices, faces
