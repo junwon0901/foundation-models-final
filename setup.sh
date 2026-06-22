@@ -11,20 +11,21 @@ echo "==> Activating sketch3d"
 conda activate sketch3d
 
 echo ""
-echo "==> [1/3] Installing PyTorch"
+echo "==> [1/4] Installing PyTorch"
 pip install torch torchvision
 
 echo ""
-echo "==> [2/3] Installing torchmcubes"
-if pip install git+https://github.com/tatsy/torchmcubes.git 2>/dev/null; then
-    echo "torchmcubes installed with CUDA support."
-else
-    echo "CUDA build failed (likely header permissions). Falling back to CPU build."
-    CMAKE_ARGS="-DCMAKE_CUDA_COMPILER=NOTFOUND" pip install git+https://github.com/tatsy/torchmcubes.git
-fi
+echo "==> [2/4] Installing CUDA toolkit into conda env"
+conda install -c "nvidia/label/cuda-13.1.0" cuda-toolkit cuda-nvcc -y 2>/dev/null || \
+conda install -c nvidia cuda-toolkit cuda-nvcc -y
 
 echo ""
-echo "==> [3/3] Installing remaining dependencies"
+echo "==> [3/4] Installing torchmcubes"
+CUDA_HOME=$CONDA_PREFIX PATH=$CONDA_PREFIX/bin:$PATH \
+  pip install git+https://github.com/tatsy/torchmcubes.git
+
+echo ""
+echo "==> [4/4] Installing remaining dependencies"
 pip install -r requirement.txt
 
 echo ""
