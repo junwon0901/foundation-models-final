@@ -53,6 +53,7 @@ This creates the `sketch3d` conda environment and installs all dependencies.
 ## Run
 
 ```bash
+conda activate sketch3d
 python demo.py samples/sample_01.png
 ```
 
