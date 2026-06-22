@@ -8,3 +8,8 @@ env/
 .cache/
 foundation-models
 .codex
+output_*/
+test_output/
+result/
+demo_outputs/
+*.log
