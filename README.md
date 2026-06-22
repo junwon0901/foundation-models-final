@@ -17,14 +17,12 @@ sketch image
     <td align="center"><img src="results/00_input_sketch.png" width="140"/></td>
     <td align="center"><b>→</b></td>
     <td align="center"><img src="results/apple_3d.png" width="160"/></td>
-    <td width="60"></td>
     <td align="center"><img src="results/octopus_sketch.png" width="140"/></td>
     <td align="center"><b>→</b></td>
     <td align="center"><img src="results/octopus_3d.png" width="160"/></td>
   </tr>
   <tr>
     <td colspan="3" align="center"><sub>apple</sub></td>
-    <td></td>
     <td colspan="3" align="center"><sub>octopus</sub></td>
   </tr>
 </table>
