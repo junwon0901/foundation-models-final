@@ -13,8 +13,8 @@ The project is intended to run on macOS, Linux, or Windows. CUDA is recommended;
 ## Setup
 
 ```bash
-git clone https://github.com/junwon0901/foundation-models-midterm.git
-cd foundation-models-midterm
+git clone https://github.com/junwon0901/foundation-models-final.git
+cd foundation-models-final
 
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
