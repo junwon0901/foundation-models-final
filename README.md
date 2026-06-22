@@ -35,6 +35,10 @@ A lightweight **sketch → image → mesh** pipeline designed to run on local ha
 - **ControlNet Scribble** generates an image that follows the user's stroke structure
 - **TripoSR** reconstructs a 3D mesh from that single image
 
+## Environment
+
+Tested with Python 3.10 and PyTorch 2.12 on Apple Silicon (macOS) and NVIDIA B200 (Linux).
+
 ## Setup
 
 ```bash
