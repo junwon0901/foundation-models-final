@@ -123,17 +123,25 @@ Edit (press Enter to quit)
 
 ## Results
 
-### Red apple
-
-<img src="results/00_input_sketch.png" width="160" alt="Input sketch"> → ![ControlNet output](results/02_controlnet_before.png) → ![3D mesh](results/Tripo_result_before.png)
-
-*sketch → ControlNet image → 3D mesh*
-
-### After edit: blue apple
-
-<img src="results/00_input_sketch.png" width="160" alt="Input sketch"> → ![ControlNet output](results/02_controlnet_after.png) → ![3D mesh](results/Tripo_result_after.png)
-
-*same sketch, edited prompt → 3D mesh*
+<table align="center">
+  <tr>
+    <th align="center">Sketch</th>
+    <th align="center">Prompt</th>
+    <th align="center">Generated Image</th>
+    <th align="center">3D Mesh</th>
+  </tr>
+  <tr>
+    <td align="center" rowspan="2"><img src="results/00_input_sketch.png" width="140"/></td>
+    <td align="center"><code>red apple</code></td>
+    <td align="center"><img src="results/02_controlnet_before.png" width="200"/></td>
+    <td align="center"><img src="results/Tripo_result_before.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td align="center"><code>blue apple</code></td>
+    <td align="center"><img src="results/02_controlnet_after.png" width="200"/></td>
+    <td align="center"><img src="results/Tripo_result_after.png" width="200"/></td>
+  </tr>
+</table>
 
 ## Models
 
