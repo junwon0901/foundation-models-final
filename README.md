@@ -29,11 +29,11 @@ sketch image
 
 <br>
 
-This project proposes a lightweight pipeline for converting hand-drawn sketches into 3D meshes. Rather than relying on high-performance GPU servers or complex multi-view reconstruction, it targets constrained local environments such as Apple MPS on a MacBook.
+A lightweight **sketch → image → mesh** pipeline designed to run on local hardware (Apple MPS, CUDA, or CPU) without multi-view capture or a GPU server.
 
-The pipeline follows a **sketch → image → mesh** flow. A lightweight Qwen-based language model first infers what object the sketch represents and supplements physical attributes not directly visible in the drawing — such as color, material, texture, and surface properties. Using the generated prompt, ControlNet Scribble preserves the user's stroke structure as faithfully as possible while producing an object image suited for 3D reconstruction. TripoSR then takes that single image and reconstructs a 3D mesh.
-
-Each model has a clearly separated role while keeping the overall system lightweight: Qwen handles semantic reasoning, ControlNet Scribble preserves sketch geometry, and TripoSR performs single-image 3D reconstruction. The result is a practical sketch-to-3D pipeline that runs entirely on local hardware.
+- **Qwen3.5-0.8B** infers the object and fills in physical attributes (color, material, texture) not visible in the sketch
+- **ControlNet Scribble** generates an image that follows the user's stroke structure
+- **TripoSR** reconstructs a 3D mesh from that single image
 
 ## Setup
 
