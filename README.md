@@ -46,22 +46,78 @@ python demo.py samples/sample_01.png --max-refine-attempts 3
 
 After the mesh is shown, type an edit prompt in the terminal and press Enter. Press Enter on an empty line to stop.
 
-Example session:
+## Example Session
 
 ```text
-$ python demo.py samples/sample_01.png --device cuda
-[Qwen] prompt: "chair"
-[ControlNet] generating image...
-[rembg] removing background...
-[Qwen] validating image... OK
-[TripoSR] reconstructing mesh...
-Mesh saved to demo_outputs/001/03_mesh.obj
+$ python demo.py samples/sample_01.png --device mps
 
-Edit prompt (or Enter to stop): make it wooden
-[Qwen] rewriting prompt: "wooden chair"
-[ControlNet] regenerating...
-...
+  Input sketch: samples/sample_01.png
+  Output dir: demo_outputs/01
+  Device: mps
+
+[1] Qwen prompt generation
+  Loading Qwen model: Qwen/Qwen3.5-0.8B on mps
+  done in 13.3s
+  Prompt: red apple, natural skin texture, small stem with leaf, isometric view, no background
+
+[2] ControlNet (attempt 1) (10 steps)
+  done in 19.3s
+
+[3] Background removal
+  done in 8.6s
+
+[4] Qwen image evaluation (attempt 1)
+  ✓ image OK
+
+[5] TripoSR 3D reconstruction (res=256)
+    File mesh: 5011 verts, 10000 faces → demo_outputs/01/03_mesh.obj
+  done in 9.2s
+
+Total elapsed: 1m 12.5s
+
+Edit (press Enter to quit)
+▶ 파란색으로 변경해 줘.
+  Translated: Switch to blue.
+
+[1] Qwen prompt rewrite
+  blue apple, natural skin texture, small stem with leaf, isometric view, no background
+
+[2] ControlNet (attempt 1) (10 steps)
+  done in 20.0s
+
+[3] Background removal
+  done in 7.1s
+
+[4] Qwen image evaluation (attempt 1)
+  ✓ image OK
+
+[5] TripoSR 3D reconstruction (res=256)
+    File mesh: 5003 verts, 9999 faces → demo_outputs/01/03_mesh.obj
+  done in 9.2s
+
+Total elapsed: 1m 12.8s
+
+Edit (press Enter to quit)
+▶ 
 ```
+
+## Results
+
+### Input Sketch
+
+![Input sketch](results/00_input_sketch.png)
+
+### Before Edit — red apple
+
+| ControlNet output | 3D mesh |
+|---|---|
+| ![ControlNet before](results/02_controlnet_before.png) | ![Mesh before](results/Tripo_result_before.png) |
+
+### After Edit — blue apple
+
+| ControlNet output | 3D mesh |
+|---|---|
+| ![ControlNet after](results/02_controlnet_after.png) | ![Mesh after](results/Tripo_result_after.png) |
 
 ## Models
 
@@ -92,3 +148,4 @@ Generated outputs are ignored by git.
 - CUDA is recommended; Apple MPS (`--device mps`) and CPU are also supported (CPU will be slow).
 - The interactive viewer requires a display. Use `--no-viewer` on headless servers.
 - TripoSR code is vendored under `TripoSR/`; weights are still loaded from Hugging Face.
+- Korean edit prompts are supported via Helsinki-NLP/opus-mt-ko-en translation.
