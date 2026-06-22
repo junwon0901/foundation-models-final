@@ -41,7 +41,6 @@ Useful options:
 python demo.py samples/sample_01.png --device cuda
 python demo.py samples/sample_01.png --device mps
 python demo.py samples/sample_01.png --no-viewer
-python demo.py samples/sample_01.png --max-refine-attempts 3
 ```
 
 After the mesh is shown, type an edit prompt in the terminal and press Enter. Press Enter on an empty line to stop.
@@ -58,7 +57,10 @@ $ python demo.py samples/sample_01.png --device mps
 [1] Qwen prompt generation
   Loading Qwen model: Qwen/Qwen3.5-0.8B on mps
   done in 13.3s
-  Prompt: red apple, natural skin texture, small stem with leaf, isometric view, no background
+  [1] Prompt -> demo_outputs/01/01_qwen_controlnet_prompt.txt
+  red apple, natural skin texture, small stem with leaf, isometric view, no background
+  Loading ControlNet: lllyasviel/sd-controlnet-scribble
+  Preparing ControlNet scribble image
 
 [2] ControlNet (attempt 1) (10 steps)
   done in 19.3s
@@ -67,20 +69,32 @@ $ python demo.py samples/sample_01.png --device mps
   done in 8.6s
 
 [4] Qwen image evaluation (attempt 1)
+  Loading Qwen model: Qwen/Qwen3.5-0.8B on mps
+  done in 14.0s
   ✓ image OK
+  ControlNet foreground accepted in memory
 
 [5] TripoSR 3D reconstruction (res=256)
-    File mesh: 5011 verts, 10000 faces → demo_outputs/01/03_mesh.obj
+    Raw mesh: 75275 verts, 150232 faces
+    Decimating: 150232 → 10000 faces
+    File mesh : 5011 verts, 10000 faces → demo_outputs/01/03_mesh.obj
+    Decimating: 150232 → 8000 faces
+    View mesh : 4005 verts, 7999 faces (for interactive viewer)
   done in 9.2s
 
 Total elapsed: 1m 12.5s
 
 Edit (press Enter to quit)
 ▶ 파란색으로 변경해 줘.
-  Translated: Switch to blue.
+  Loading translator: Helsinki-NLP/opus-mt-ko-en
+    Translated: Switch to blue.
 
 [1] Qwen prompt rewrite
+  Loading Qwen model: Qwen/Qwen3.5-0.8B on mps
+  done in 11.6s
   blue apple, natural skin texture, small stem with leaf, isometric view, no background
+  Loading ControlNet: lllyasviel/sd-controlnet-scribble
+  Preparing ControlNet scribble image
 
 [2] ControlNet (attempt 1) (10 steps)
   done in 20.0s
@@ -89,10 +103,16 @@ Edit (press Enter to quit)
   done in 7.1s
 
 [4] Qwen image evaluation (attempt 1)
+  Loading Qwen model: Qwen/Qwen3.5-0.8B on mps
+  done in 13.5s
   ✓ image OK
 
 [5] TripoSR 3D reconstruction (res=256)
-    File mesh: 5003 verts, 9999 faces → demo_outputs/01/03_mesh.obj
+    Raw mesh: 56770 verts, 113344 faces
+    Decimating: 113344 → 10000 faces
+    File mesh : 5003 verts, 9999 faces → demo_outputs/01/03_mesh.obj
+    Decimating: 113344 → 8000 faces
+    View mesh : 4002 verts, 7999 faces (for interactive viewer)
   done in 9.2s
 
 Total elapsed: 1m 12.8s
